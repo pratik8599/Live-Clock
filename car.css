@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    overflow: hidden;
+    animation: bodyShake linear 2s infinite;
+}
+.sky{
+    width: 100%;
+    position: absolute;
+background-image: url(background.jpg);
+background-repeat: repeat-x;
+/* background-size: cover; */
+height: 100vh;
+/* animation: skyMove linear 13s infinite; */
+}
+.trees{
+    width: 100%;
+    height: 100vh;
+    top: -200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* z-index: 1; */
+    background-image: url(trees.png);
+   position: absolute;
+}
+.track{
+    position: absolute;
+    width: 8000vw;
+    height: 60vh;
+    top: 60vh;
+    background-repeat: repeat-x;
+    background-image: url(track.png);
+    animation: carMove linear 13s infinite;
+}
+.car{
+    background-image: url(car_body.png);
+    top: 440px;
+    left: 200px;
+    position: absolute;
+    height: 10%;
+    width: 22%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: shake linear .5s infinite;
+}
+.wheelLeft img{
+    position: relative;
+    top: 38px;
+    left: 42px;
+    height: 58px;
+    width: 58px;
+    background-repeat: no-repeat;
+    animation: rotation linear .5s infinite;
+}
+.wheelRight img{
+    position: relative;
+    bottom: 24px;
+    left: 212px;
+    height: 60px;
+    width: 60px;
+    background-repeat: no-repeat;
+    animation: rotation linear .5s infinite;
+}
+@keyframes rotation {
+    100%{
+        transform:rotate(360deg)
+    }
+}
+@keyframes carMove {
+    100%{
+        transform: translate(-500vw);
+    }
+}
+@keyframes shake {
+    0%{
+        transform: translateY(-2px);
+    }
+    50%{
+        transform: translateY(2px);
+    }
+    100%{
+        transform: translateY(-2px);
+    }
+}
+@keyframes bodyShake {
+    0%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+@keyframes skyMove {
+    100%{
+        transform: translate(-500vw);
+    }
+}
